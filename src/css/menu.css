@@ -1,0 +1,105 @@
+.menuToggle {
+  width: 2.5rem;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+  padding: .3rem;
+  user-select: none;
+  z-index: 1;
+}
+
+.menuToggle input {
+  width: 2.5rem;
+  height: 2rem;
+  position: absolute;
+  top: -0.25rem;
+  left: 0.1rem;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.menuToggle span {
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: .25rem;
+  margin-bottom: .32rem;
+  background-color: #4c8ca0;
+  border-radius: .2rem;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background-color 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menuToggle:hover span {
+  background: #68c4e0;
+}
+
+.menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu {
+  position: absolute;
+  width: 19rem;
+  margin: -6rem 0 0 -3rem;
+  padding: 1.25rem 3rem;
+  padding-top: 5.5rem;
+  background: #e4e4e488;
+  backdrop-filter: blur(1.5rem);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+  border-radius: .75rem;
+  box-shadow: 0px 10px 20px #444;
+}
+
+.menu li {
+  padding: .65rem 0;
+  font-size: 1.4rem;
+  width: 9rem;
+  margin: 0.5px auto;
+  display: flex;
+  justify-content: center;
+  color: #444;
+  cursor: pointer;
+  transition: 0.1s color ease-in-out;
+  border-radius: 1.4rem;
+}
+
+.menu li:hover {
+  color: #fff !important;
+}
+
+.menuToggle input:checked ~ ul {
+  transform: none;
+  display: grid;
+}
+
+.item-menu {
+  border: 2px solid gray;
+}
+
+.item-menu:hover {
+  border: 2px dotted olivedrab;
+}
