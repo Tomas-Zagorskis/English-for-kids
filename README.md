@@ -2,7 +2,7 @@
 
 [Task](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/rslang/english-for-kids-translated.md)
 
-[APP](#)
+[APP](https://tomas-zagorskis.github.io/English-for-kids/)
 
 ## Application Structure:
 1. Main page
